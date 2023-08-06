@@ -2,7 +2,7 @@ package handlers
 
 import (
 	"encoding/json"
-	"github.com/fkaanoz/middlewares/app"
+	"github.com/fkaanoz/middlewares/internal/app"
 	"net/http"
 )
 

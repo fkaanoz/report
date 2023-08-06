@@ -3,7 +3,7 @@ package app
 import (
 	"database/sql"
 	"github.com/dimfeld/httptreemux/v5"
-	"github.com/fkaanoz/connect/controllers"
+	"github.com/fkaanoz/connect/internal/controllers"
 	"go.uber.org/zap"
 	"net/http"
 )

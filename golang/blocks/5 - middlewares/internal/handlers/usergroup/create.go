@@ -3,8 +3,8 @@ package usergroup
 import (
 	"context"
 	"encoding/json"
-	"github.com/fkaanoz/middlewares/handlers"
-	"github.com/fkaanoz/middlewares/models"
+	"github.com/fkaanoz/middlewares/internal/handlers"
+	"github.com/fkaanoz/middlewares/internal/models"
 	"io"
 	"net/http"
 )

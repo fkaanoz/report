@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 	"github.com/dimfeld/httptreemux/v5"
-	"github.com/fkaanoz/middlewares/app"
-	"github.com/fkaanoz/middlewares/handlers/usergroup"
-	"github.com/fkaanoz/middlewares/mids"
+	app2 "github.com/fkaanoz/middlewares/internal/app"
+	usergroup2 "github.com/fkaanoz/middlewares/internal/handlers/usergroup"
+	mids2 "github.com/fkaanoz/middlewares/internal/mids"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 	"log"
@@ -22,13 +22,13 @@ func main() {
 		log.Fatal("log creation error : ", err)
 	}
 
-	a := app.App{
+	a := app2.App{
 		ContextMux:  httptreemux.NewContextMux(),
-		Middlewares: []app.Middleware{mids.Logger(zapLogger), mids.Panic(), mids.Error(zapLogger)}, // app wised middlewares.
+		Middlewares: []app2.Middleware{mids2.Logger(zapLogger), mids2.Panic(), mids2.Error(zapLogger)}, // app wised middlewares.
 	}
 
-	a.Handle(http.MethodGet, "/users", usergroup.List)
-	a.Handle(http.MethodPost, "/users/create", usergroup.Create)
+	a.Handle(http.MethodGet, "/users", usergroup2.List)
+	a.Handle(http.MethodPost, "/users/create", usergroup2.Create)
 
 	log.Fatal(http.ListenAndServe(":4000", a))
 }

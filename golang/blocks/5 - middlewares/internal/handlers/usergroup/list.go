@@ -2,8 +2,8 @@ package usergroup
 
 import (
 	"context"
-	"github.com/fkaanoz/middlewares/handlers"
-	"github.com/fkaanoz/middlewares/models"
+	"github.com/fkaanoz/middlewares/internal/handlers"
+	"github.com/fkaanoz/middlewares/internal/models"
 	"net/http"
 )
 

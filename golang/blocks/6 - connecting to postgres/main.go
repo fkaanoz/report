@@ -3,8 +3,8 @@ package main
 import (
 	"errors"
 	"github.com/ardanlabs/conf"
-	"github.com/fkaanoz/connect/app"
-	"github.com/fkaanoz/connect/database"
+	"github.com/fkaanoz/connect/internal/app"
+	"github.com/fkaanoz/connect/internal/database"
 	_ "github.com/lib/pq"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
